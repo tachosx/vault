@@ -1,3 +1,4 @@
+# Arch Linux Installation Guide
 ## Set global environment variables
 
 Add below environment variables to `/etc/security/pam_env.conf` file
