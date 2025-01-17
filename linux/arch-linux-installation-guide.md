@@ -28,5 +28,12 @@ VISUAL=nvim
 ```
 
 ## Ricing Hyprland
+```shell
+paru -S stow hyprland kitty zen-browser-bin
+
+stow --target=$HOME hyprland
+```
+
 ## Tools and utilities
 - [XDG user directories](https://wiki.archlinux.org/title/XDG_user_directories)
+
