@@ -78,7 +78,23 @@ To Do
 Install Hyprland packages
 
 ```shell
-paru -S hyprland-git kitty zen-brownser-bin rofi nautilus waybar fastfetch stow less obsidian
+paru -S hyprland-git kitty zen-brownser-bin rofi-wayland nautilus waybar fastfetch stow less obsidian 7zip zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search zsh-vi-mode starship lsd bat cava unimatrix yazi ttf-font-awesome
+```
+
+Download and install fonts
+
+```
+sudo mkdir -p /usr/local/share/fonts/ttf
+7z x -oJetBrainsMono JetBrainsMono.zip
+sudo mv JetBrainsMono /usr/local/share/fonts/ttf
+
+```
+
+Making Zsh your default shell
+
+```
+chsh -l
+chsh -s /usr/bin/zsh
 ```
 
 Clone dotfiles
@@ -94,6 +110,23 @@ Manage dotfiles using GNU Stow
 ```shell
 cd dotfiles
 stow --target=$HOME hyprland
+stow --target=$HOME kitty
+stow --target=$HOME zsh
+stow --target=$HOME bat
+stow --target=$HOME cava
+stow --target=$HOME nvim
+stow --target=$HOME rofi
+stow --target=$HOME starship
+stow --target=$HOME wallpapers
+stow --target=$HOME waybar
+```
+
+## Themes
+
+```
+git clone https://github.com/catppuccin/rofi.git
+cd rofi/basic
+sh install.sh
 ```
 
 ## Tools and utilities
@@ -111,8 +144,14 @@ menuentry "FreeBSD" {
 }
 ```
 
-## TO DO
+Generate GRUB configuration file
+
+```shell
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## To Do
 - [ ] Updates the mirror list
-- [ ] Dual boot FreeBSD
 - [ ] hyprshot hyperlock hypridle
 - [ ] Audio
+- [ ] Free up disk space
