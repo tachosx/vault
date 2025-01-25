@@ -83,7 +83,7 @@ paru -S hyprland-git kitty zen-brownser-bin rofi-wayland nautilus waybar fastfet
 
 Download and install fonts
 
-```
+```shell
 sudo mkdir -p /usr/local/share/fonts/ttf
 7z x -oJetBrainsMono JetBrainsMono.zip
 sudo mv JetBrainsMono /usr/local/share/fonts/ttf
@@ -92,7 +92,7 @@ sudo mv JetBrainsMono /usr/local/share/fonts/ttf
 
 Making Zsh your default shell
 
-```
+```shell
 chsh -l
 chsh -s /usr/bin/zsh
 ```
@@ -123,10 +123,13 @@ stow --target=$HOME waybar
 
 ## Themes
 
-```
+```shell
 git clone https://github.com/catppuccin/rofi.git
 cd rofi/basic
 sh install.sh
+
+bat cache --build
+bat --list-themes
 ```
 
 ## Tools and utilities
