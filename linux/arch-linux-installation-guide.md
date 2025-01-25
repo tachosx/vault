@@ -35,7 +35,7 @@ timedatectl set-ntp true
 pacstrap -K /mnt base linux linux-firmware linux-headers neovim sudo
 ```
 
-## Install the main packages
+## Install main packages
 ```shell
 pacman -S btrfs-progs grub grub-btrfs efibootmgr networkmanager git reflector amd-ucode terminus-font firewalld
 ```
@@ -115,3 +115,4 @@ menuentry "FreeBSD" {
 - [ ] Updates the mirror list
 - [ ] Dual boot FreeBSD
 - [ ] hyprshot hyperlock hypridle
+- [ ] Audio
