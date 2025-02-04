@@ -27,8 +27,8 @@ timedatectl set-ntp true
 | Size             | Partition Type Code | Name                  |
 | :--------------- | :-----------------: | :-------------------- |
 | 1 GB             |        EF00         | EFI system partition  |
-| 400 GB           |        8304         | Linux x86-64 root (/) |
-| Rest of the disk |        A503         | FreeBSD UFS           |
+| 100 GB           |        A503         | FreeBSD UFS           |
+| Rest of the disk |        8304         | Linux x86-64 root (/) |
 
 ## Install essential packages
 ```shell
@@ -66,9 +66,7 @@ ZDOTDIR         DEFAULT=${XDG_CONFIG_HOME}/zsh
 ```
 
 ## Updates the mirror list
-```shell
-To Do
-```
+[Reflector](https://wiki.archlinux.org/title/Reflector)
 
 ## Initialize zram devices
 [zram-generator](https://wiki.archlinux.org/title/Zram)
@@ -78,7 +76,7 @@ To Do
 Install Hyprland packages
 
 ```shell
-paru -S hyprland-git kitty zen-brownser-bin rofi-wayland nautilus waybar fastfetch stow less obsidian 7zip zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search zsh-vi-mode starship lsd bat cava unimatrix yazi ttf-font-awesome
+yay -S hyprland-git kitty zen-brownser-bin rofi-wayland nautilus waybar fastfetch stow less obsidian 7zip zsh zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search zsh-vi-mode starship lsd bat cava unimatrix yazi ttf-font-awesome hyprshot hyperlock-git hypridle hyprpaper-git htop swaync brightnessctl nwg-look xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk-git qt5-wayland qt6-wayland
 ```
 
 Download and install fonts
@@ -86,8 +84,9 @@ Download and install fonts
 ```shell
 sudo mkdir -p /usr/local/share/fonts/ttf
 7z x -oJetBrainsMono JetBrainsMono.zip
+7z x -oCascadiaCode CascadiaCode.zip
 sudo mv JetBrainsMono /usr/local/share/fonts/ttf
-
+sudo mv CascadiaCode /usr/local/share/fonts/ttf
 ```
 
 Making Zsh your default shell
@@ -103,6 +102,7 @@ Clone dotfiles
 mkdir developer
 cd developer
 git clone https://github.com/tachosx/dotfiles.git
+git clone https://github.com/tachosx/vault.git
 ```
 
 Manage dotfiles using GNU Stow
@@ -121,19 +121,31 @@ stow --target=$HOME wallpapers
 stow --target=$HOME waybar
 ```
 
+[Must have](https://wiki.hyprland.org/Useful-Utilities/Must-have/)
+
 ## Themes
+
+Rofi app launcher
 
 ```shell
 git clone https://github.com/catppuccin/rofi.git
 cd rofi/basic
 sh install.sh
+```
 
+BAT
+
+```shell
 bat cache --build
 bat --list-themes
 ```
 
-## Tools and utilities
-- [XDG user directories](https://wiki.archlinux.org/title/XDG_user_directories)
+[GRUB](https://github.com/catppuccin/grub)
+
+[TTY] (https://github.com/catppuccin/tty)
+
+## Multimedia
+[Install PipeWire on Arch Linux](https://linuxgenie.net/install-pipewire-on-arch-linux/)
 
 ## Dual boot FreeBSD - UEFI/GPT
 
@@ -142,7 +154,7 @@ Add menuentry to  `/etc/grub.d/40_custom`
 ```shell
 menuentry "FreeBSD" {
 	insmod ufs2
-	set root='(hd0,gpt3)'
+	set root='(hd0,gpt2)'
 	chainloader /boot/loader.efi
 }
 ```
@@ -154,7 +166,5 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## To Do
-- [ ] Updates the mirror list
-- [ ] hyprshot hyperlock hypridle
-- [ ] Audio
+- [ ] [[#Updates the mirror list]]
 - [ ] Free up disk space
