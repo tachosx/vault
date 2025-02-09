@@ -123,26 +123,13 @@ stow --target=$HOME waybar
 
 [Must have](https://wiki.hyprland.org/Useful-Utilities/Must-have/)
 
-## Themes
+## Catppuccin color scheme
 
-Rofi app launcher
-
-```shell
-git clone https://github.com/catppuccin/rofi.git
-cd rofi/basic
-sh install.sh
-```
-
-BAT
-
-```shell
-bat cache --build
-bat --list-themes
-```
-
-[GRUB](https://github.com/catppuccin/grub)
-
-[TTY](https://github.com/catppuccin/tty)
+- Rofi
+- bat
+- GRUB
+- tty
+- Zen Browser
 
 ## Multimedia
 [Install PipeWire on Arch Linux](https://linuxgenie.net/install-pipewire-on-arch-linux/)
