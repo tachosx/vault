@@ -142,7 +142,7 @@ bat --list-themes
 
 [GRUB](https://github.com/catppuccin/grub)
 
-[TTY] (https://github.com/catppuccin/tty)
+[TTY](https://github.com/catppuccin/tty)
 
 ## Multimedia
 [Install PipeWire on Arch Linux](https://linuxgenie.net/install-pipewire-on-arch-linux/)
