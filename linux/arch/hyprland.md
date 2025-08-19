@@ -111,4 +111,4 @@ $ stow --target=$HOME waybar
 
 ## 4  Multimedia
 
-[Install PipeWire on Arch Linux](https://linuxgenie.net/install-pipewire-on-arch-linux/)
+- [ ] [Install PipeWire on Arch Linux](https://linuxgenie.net/install-pipewire-on-arch-linux/)
