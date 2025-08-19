@@ -1,22 +1,26 @@
 # Arch Linux Installation Guide
 
 ## MSI hot keys
+
 ```shell
 To enter UEFI Firmware	DEL
 To boot menu display	F11
 ```
 
 ## Step-by-step guide
+
 [Arch Linux Installation Guide](https://github.com/radleylewis/arch_installation_guide)
 [Arch Linux Post Install Guide | Linux Security](https://www.youtube.com/watch?v=8Oz4CIB4YjU)
 
 ## Set the console keyboard layout and font
+
 ```shell
 loadkeys la-latin1
 setfont ter-120b
 ```
 
 ## Set the timezone
+
 ```shell
 timedatectl list-timezones | grep Mexico
 timedatectl set-timezone America/Mexico_City
@@ -32,11 +36,13 @@ timedatectl set-ntp true
 | Rest of the disk |        8304         | Linux x86-64 root (/) |
 
 ## Install essential packages
+
 ```shell
 pacstrap -K /mnt base linux linux-firmware linux-headers neovim sudo
 ```
 
 ## Install main packages
+
 ```shell
 pacman -S \
 	btrfs-progs \
@@ -121,7 +127,8 @@ yay -S \
 	nwg-look \
 	xdg-desktop-portal-hyprland-git \
 	xdg-desktop-portal-gtk-git \
-	qt5-wayland qt6-wayland
+	qt5-wayland qt6-wayland \
+	wl-clipboard
 ```
 
 Download and install fonts
@@ -179,6 +186,7 @@ stow --target=$HOME waybar
 - Obsidian
 
 ## Multimedia
+
 [Install PipeWire on Arch Linux](https://linuxgenie.net/install-pipewire-on-arch-linux/)
 
 ## Dual boot FreeBSD - UEFI/GPT
