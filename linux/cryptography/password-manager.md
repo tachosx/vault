@@ -3,25 +3,25 @@
 [The standard UNIX password manager](https://wiki.archlinux.org/title/Pass) is a simple password manager for the command line.
 ## 1  Basic usage
 
-Generate a GnuPG key pair.
+Generate a GnuPG key pair
 
 ```shell
 $ gpg --full-gen-key
 ```
 
-Initialize the password store.
+Initialize the password store
 
 ```shell
 $ pass init gpg_key_id
 ```
 
-Create a new password.
+Create a new password
 
 ```shell
 $ pass insert github/access/token
 ```
 
-Get a view of the password store.
+Get a view of the password store
 
 ```shell
 $ pass
@@ -33,7 +33,7 @@ Generate a new random password, where `n` is the desired password length.
 $ pass generate github/access/token n
 ```
 
-Retrieve a password.
+Retrieve a password
 
 ```shell
 $ pass github/access/token
@@ -57,20 +57,20 @@ Create a local password store
 $ pass init gpg_key_id
 ```
 
-Enable management of local changes through Git.
+Enable management of local changes through Git
 
 ```shell
 $ pass git init
 ```
 
-Add the remote git repository as 'origin'.
+Add the remote git repository as 'origin'
 
 ```shell
 $ pass git remote add origin https://github.com/username/.password-store.git
 $ pass git branch -M main
 ```
 
-Push your local pass history.
+Push your local pass history
 
 ```shell
 $ pass git push -u --all

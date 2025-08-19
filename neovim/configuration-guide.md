@@ -1,5 +1,5 @@
 # Neovim Configuration Guide
-## Understanding Neovim
+## 1  Understanding Neovim
 
 Tutorial series from [Vhyrro](https://www.youtube.com/@vhyrro)
 
@@ -14,7 +14,7 @@ Tutorial series from [Vhyrro](https://www.youtube.com/@vhyrro)
 - [ ] Completion engines
 - [ ] Lazydev
 
-## Neovim for Newbs
+## 2  Neovim for Newbs
 
 Tutorial series from [typecraft](https://www.youtube.com/@typecraft_dev)]
 
