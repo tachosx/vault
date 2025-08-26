@@ -49,8 +49,6 @@ $ pass -c archlinux.org/wiki/username
 
 You are able to setup a password management system by setting up a central Git server for pass. This allows you to synchronize your central password repository through multiple client environments.
 
-This section assumes you have configured GnuPG and have a key pair to encrypt passwords. On your local client ensure you have a local password store on the client, then enable management of local changes through Git, add your remote Git repository, and push your local pass history.
-
 Create a local password store
 
 ```shell
