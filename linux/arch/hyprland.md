@@ -16,7 +16,7 @@ Install Hyprland packages and [Useful Utilities](https://wiki.hypr.land/Useful-U
 $ yay -S \
 	hyprland-git \
 	kitty \
-	brave-brownser \
+	brave-browser \
 	rofi-wayland \
 	nautilus \
 	waybar \
