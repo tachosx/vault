@@ -14,7 +14,7 @@ Install Hyprland packages and [Useful Utilities](https://wiki.hypr.land/Useful-U
 
 ```shell
 $ yay -S \
-	hyprland-git \
+	hyprland \
 	kitty \
 	brave-browser \
 	rofi-wayland \
@@ -38,16 +38,16 @@ $ yay -S \
 	yazi \
 	ttf-font-awesome \
 	hyprshot \
-	hyperlock-git \
+	hyperlock \
 	hypridle \
-	hyprpaper-git \
+	hyprpaper \
 	htop \
 	swaync \
 	brightnessctl \
 	nwg-look \
 	catppuccin-gtk-theme-mocha
-	xdg-desktop-portal-hyprland-git \
-	xdg-desktop-portal-gtk-git \
+	xdg-desktop-portal-hyprland \
+	xdg-desktop-portal-gtk \
 	qt5-wayland \
 	qt6-wayland \
 	wl-clipboard
